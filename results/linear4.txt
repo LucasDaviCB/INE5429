@@ -1,0 +1,11 @@
+﻿Tempo total para gerar 10000 numeros com 40 bits: 1.9960 milissegundos
+Tempo total para gerar 10000 numeros com 56 bits: 2.9900 milissegundos
+Tempo total para gerar 10000 numeros com 80 bits: 2.9900 milissegundos
+Tempo total para gerar 10000 numeros com 128 bits: 2.5034 milissegundos
+Tempo total para gerar 10000 numeros com 168 bits: 2.9917 milissegundos
+Tempo total para gerar 10000 numeros com 224 bits: 2.9907 milissegundos
+Tempo total para gerar 10000 numeros com 256 bits: 3.4919 milissegundos
+Tempo total para gerar 10000 numeros com 512 bits: 3.9892 milissegundos
+Tempo total para gerar 10000 numeros com 1024 bits: 3.9866 milissegundos
+Tempo total para gerar 10000 numeros com 2048 bits: 7.4811 milissegundos
+Tempo total para gerar 10000 numeros com 4096 bits: 23.4458 milissegundos
