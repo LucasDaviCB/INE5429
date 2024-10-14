@@ -74,9 +74,9 @@ while len(prime_numbers) < desired_primes:
 #total_elapsed_time_ms = (end_time - start_time) * 1000
 
 # Exibir a tabela de números primos
-print("Tabela de Números Primos:")
+'''print("Tabela de Números Primos:")
 for i, prime in enumerate(prime_numbers, start=1):
-    print(f"{i}: {prime}")
+    print(f"{i}: {prime}")'''
 
 # Exibir o tempo total decorrido e o número de tentativas
 #print(f"Tempo total para gerar {desired_primes} números primos: {total_elapsed_time_ms:.4f} milissegundos")
