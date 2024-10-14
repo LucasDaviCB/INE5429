@@ -5,7 +5,8 @@ How to run the algorithms:
 1 - Open the folder of the desired primality algorithm (the one you want to check)
 
 2 - Inside this folder, type: python3 filename.py > outputname.txt
-Where filename.py is the name of the algorithm code (like fermat_linear.py) and outputname.txt is whatever name you want the output file to have + .txt on the end
+
+- Where filename.py is the name of the algorithm code (like fermat_linear.py) and outputname.txt is whatever name you want the output file to have + .txt on the end
 
 3 - It should create an output file in the same folder that you had opened, with similar content to the output files that can be found at /INE5429/results folder
 
