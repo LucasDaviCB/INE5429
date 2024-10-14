@@ -1,0 +1,3 @@
+This is the codes for Miller_Rabin and Xorshift integration
+
+Xorshift.py will repeat in the other algorithm folder because I made all of it in one folder in my pc, but If you download the repository here it will split to multiple folders, so to keep the "import xorshift" basic, I will include the xorshift.py code in every folder that it is needed
