@@ -1,1 +1,9 @@
+This is the codes for Fermat integration with Xorshift and Linear Congruential Generator
 
+Xorshift.py will repeat in the other algorithm folder because I made all of it in one folder in my pc, but If you download the repository here it will split to multiple folders, so to keep the "import xorshift" basic, I will include the xorshift.py code in every folder that it is needed
+
+Same thing for the Linear congruential generator, it will repeat as well
+
+
+
+IMPORTANT: Xorshift.py has a "results" section commented at the bottom of the file, if you need to check the output of running the Xorshift.py file by itselt, please uncomment that section (it was made commented because it would run everytime miller_xorshift.py tried to call xorshift.py to do something, and would pollute the result.txt)
