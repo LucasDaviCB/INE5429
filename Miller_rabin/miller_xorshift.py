@@ -44,34 +44,20 @@ desired_primes = 1
 # Contador de tentativas
 attempts = 0
 
-# Iniciar a contagem do tempo
-#start_time = time.time()
-
 # Gerar números até encontrar a quantidade desejada de primos
-#xorshift.xorshift = xorshift.XorShift4096(xorshift.SeedGenerator.generate_seed(xorshift.lista[0]), xorshift.lista[0])
-while len(prime_numbers) < desired_primes:
-    for j in range(len(xorshift.lista)):
+while len(prime_numbers) < desired_primes: # Gerar números até encontrar a quantidade desejada de primos
+    for j in range(len(xorshift.lista)): #percorre a lista de bits (40, 56, 80, 128, 168, 224, 256, 512, 1024, 2048, 4096), que são as linhas da matriz de números gerados
         start_time = time.time()
-        for item in range(len(xorshift.lista_todos[0])):
-            random_number = xorshift.lista_todos[j][item]
-            attempts += 1
-            if miller_rabin(random_number):
-                prime_numbers.append(random_number)
+        for item in range(len(xorshift.lista_todos[0])): #aqui é feita a iteração com base no tamanho de cada linha (em colunas), que depende do valor de iterações feitas no xorshift.py
+            random_number = xorshift.lista_todos[j][item] #seleciona um numero com base nos valores de j e item (linha e coluna) da matriz lista_todos (que é a matriz com todos os números, de todos os bit sizes) para atribuir a random_number
+            attempts += 1 #soma 1 ao contador de tentativas
+            if miller_rabin(random_number): # realiza o teste de primalidade de Miller-Rabin com o número adquirido no passo anterior
+                prime_numbers.append(random_number) # se o número for primo, adiciona o número a lista de números primos, printa o número e quebra o loop
                 print(f"Numero primo: {random_number}")
-                break
+                break # Sai do loop interno se encontrar um primo
         end_time = time.time()
         total_elapsed_time_ms = (end_time - start_time)
         print(f"Tempo total para gerar o numero de {xorshift.lista[j]} bits: {total_elapsed_time_ms:.4f} segundos")
-    #random_number = xorshift.xorshift.next()
-    #attempts += 1
-    #if miller_rabin(random_number):
-        #prime_numbers.append(random_number)
-
-# Finalizar a contagem do tempo
-#end_time = time.time()
-
-# Calcular o tempo total decorrido em milissegundos
-#total_elapsed_time_ms = (end_time - start_time) * 1000
 
 # Exibir a tabela de números primos
 '''print("Tabela de Números Primos:")
