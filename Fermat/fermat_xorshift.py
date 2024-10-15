@@ -30,21 +30,20 @@ desired_primes = 1
 # Contador de tentativas
 attempts = 0
 
-# Gerar números até encontrar a quantidade desejada de primos
-while len(prime_numbers) < desired_primes:
-    for j in range(len(xorshift.lista)):
+while len(prime_numbers) < desired_primes: # Gerar números até encontrar a quantidade desejada de primos
+    for j in range(len(xorshift.lista)): #percorre a lista de bits (40, 56, 80, 128, 168, 224, 256, 512, 1024, 2048, 4096), que são as linhas da matriz de números gerados
         start_time = time.time()
-        for item in range(len(xorshift.lista_todos[0])):
-            random_number = xorshift.lista_todos[j][item]
-            attempts += 1
-            if fermat_primality_test(random_number):
-                prime_numbers.append(random_number)
+        for item in range(len(xorshift.lista_todos[0])): #aqui é feita a iteração com base no tamanho de cada linha (em colunas), que depende do valor de iterações feitas no xorshift.py
+            random_number = xorshift.lista_todos[j][item]  #seleciona um numero com base nos valores de j e item (linha e coluna) da matriz lista_todos (que é a matriz com todos os números, de todos os bit sizes) para atribuir a random_number
+            attempts += 1 #soma 1 ao contador de tentativas
+            if fermat_primality_test(random_number):  # realiza o teste de primalidade de fermat com o número adquirido no passo anterior
+                prime_numbers.append(random_number)  # se o número for primo, adiciona o número a lista de números primos, printa o número e quebra o loop
                 print(f"Numero primo: {random_number}")
-                break
+                break  # Sai do loop interno se encontrar um primo
         end_time = time.time()
-        total_elapsed_time = (end_time - start_time)
+        total_elapsed_time = (end_time - start_time)  # Calcula o tempo total decorrido
         if total_elapsed_time < 1:
-            total_elapsed_time_ms = total_elapsed_time * 1000
+            total_elapsed_time_ms = total_elapsed_time * 1000  # Converte para milissegundos caso o valor seja menor que 1 segundo
             print(f"Tempo total para gerar o numero de {xorshift.lista[j]} bits: {total_elapsed_time_ms:.4f} milissegundos")
         else:
             print(f"Tempo total para gerar o numero de {xorshift.lista[j]} bits: {total_elapsed_time:.4f} segundos")
